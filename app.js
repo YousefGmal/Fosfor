@@ -6,6 +6,9 @@ const app = express()
 app.use(express.json())
 app.use(router)
 connectDB()
+app.get("/",(req,res)=>{
+    res.json({message:"welcome to fosfor"})
+})
 app.listen(3000, () => {
     console.log('Example app listening on port 3000!')
   })
